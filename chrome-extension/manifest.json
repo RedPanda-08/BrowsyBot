@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Browser History Tracker",
+    "version": "1.0",
+    "description": "Tracks visited browsers and saves it's URL even if your browser history is deleted.",
+    "permissions": [
+      "tabs",
+      "storage",
+      "history"
+    ],
+    "host_permissions": [
+      "http://localhost:3000/*"
+    ],
+    "background": {
+      "service_worker": "background.mjs",
+      "type": "module"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }
